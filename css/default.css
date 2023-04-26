@@ -1,0 +1,119 @@
+* {
+	--input-linear: linear-gradient(120deg, #00001F, #17F2AD);
+	--input-error: red;
+	--button-linear: linear-gradient(120deg, #00001F, #17F2AD, #00001F);
+	--button-disabled: #acacac;
+	--white: #fff;
+	--black: #303030;
+	--gray: #929292;
+	--light-gray: #cfcfcf;
+	--border-height: 1px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.login {
+	height: 100vh;
+	background: var(--input-linear);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loginContainer {
+	min-height: 400px;
+	width: 300px;
+	background-color: var(--white);
+	box-sizing: border-box;
+	padding: 32px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.loginTitle {
+	margin-bottom: 32px;
+	color: var(--black);
+}
+
+.loginForm {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.loginInput {
+	height: 48px;
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: 8px;
+	border: unset;
+	outline: none;
+}
+
+.loginInputBorder {
+	height: var(--border-height);
+	width: 100%;
+	margin-bottom: 16px;
+	background-color: var(--light-gray);
+	transition: .3s ease-in-out;
+}
+
+.loginInputBorder::after {
+	content: "";
+	display: block;
+	height: var(--border-height);
+	width: 0;
+	margin-bottom: 16px;
+	background: var(--input-linear);
+	transition: .3s ease-in-out;
+}
+
+.loginInput:focus + .loginInputBorder::after {
+	width: 100%;
+}
+
+.loginInputBorder.error {
+	background: var(--input-error);
+}
+
+.loginInputBorder.error::after {
+	background: var(--input-error);
+}
+
+.loginSubmit {
+	height: 48px;
+	width: 100%;
+	outline: none;
+	background: var(--button-linear);
+	background-size: 200%;
+	margin-bottom: 32px;
+	color: var(--white);
+	font-size: 16px;
+	font-weight: bold;
+	border: unset;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+.loginSubmit:disabled {
+	background: var(--button-disabled);
+	cursor: not-allowed;
+}
+
+.loginSubmit:hover {
+	background-position: right;
+}
+
+.loginReset {
+	font-size: 12px;
+	color: var(--gray);
+	text-decoration: none;
+}

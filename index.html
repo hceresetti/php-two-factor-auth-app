@@ -1,41 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRABALHO DE SEGURANÇA</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <main class="login">
-        <div class="login__container">
-            <h1 class="login__title">Login</h1>
-            <form action="valida.php" method="POST" class="login__form">
-		<h2>Entrar</h2>
-                <p>Usuário: Orlando</p>
-                <p>Senha: Henry</p>
-		<br> <br>
-                <input class="login__input" type="text" placeholder="Nome">
-                <span class="login__input-border"></span>
-                <input class="login__input" type="password" placeholder="Senha">
-                <span class="login__input-border"></span>
-                <button class="login__submit">Login</button>
-                <a class="login__reset" href="#">Esqueci a senha</a>
-            </form>
-        </div>
-    </main>
-</body>
-
-<!-- <script>
-    let user = document.getElementById('user');
-    let password = document.getElementById('senha');
-    let href = document.getElementById('login');
-    if (user.texto.value === "claudio" && password.texto2.value === "1234"){
-        href.setAtttribute('href', "orlando.php")
-    }else{
-        href.setAtttribute('href', "valida.php")
-    }
-</script> -->
-
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ISG018 - Two Factor Auth</title>
+		<link rel="stylesheet" href="css/default.css">
+	</head>
+	<body>
+		<main class="login">
+			<div class="login__container">
+				<h1 class="login__title">Login</h1>
+				<form method="POST" action="valida.php" class="login__form">
+					<h2>Sign In</h2>
+					<p>Username: Egypt</p>
+					<p>Passphrase: Giza</p>
+					<br><br>
+					<label for="username">Username:</label>
+					<input type="text" id="username" name="username" placeholder="Type your username" class="login__input">
+					<span class="login__input-border"></span>
+					<label for="passphrase"></label>
+					<input type="passphrase" id="passphrase" name="passphrase" placeholder="Type your passphrase" class="login__input">
+					<span class="login__input-border"></span>
+					<button type="submit" class="login__submit">Sign In</button>
+					<a class="login__reset" href="#">Forgot the passphrase</a>
+				</form>
+			</div>
+		</main>
+		<footer>
+			<small>&copy; 2023 Orlando Medeiros Júnior and Henry Melo Ceresetti</small>
+		</footer>
+	</body>
 </html>
